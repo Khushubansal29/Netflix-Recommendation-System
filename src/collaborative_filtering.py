@@ -38,3 +38,22 @@ print(similarity_df.shape)
 
 print("\nFirst 5x5 Similarity Matrix:")
 print(similarity_df.iloc[:5, :5])
+
+# Recommendation Function
+
+def recommend_movies(movie_id, top_n=5):
+
+    print(f"\nMovies similar to Movie {movie_id}:")
+
+    similar_movies = similarity_df[movie_id].sort_values(
+        ascending=False
+    )
+
+    recommendations = similar_movies.iloc[1:top_n+1]
+
+    print(recommendations)
+
+    return recommendations
+
+print("\nTesting recommendation function...")
+recommend_movies(1)
