@@ -1,5 +1,17 @@
 import pandas as pd
 
+movies = pd.read_csv(
+    "data/raw/movie_titles.csv",
+    header=None,
+    names=["MovieID", "Year", "Title"],
+    encoding="latin1",
+    on_bad_lines="skip"
+)
+
+movie_dict = dict(
+    zip(movies["MovieID"], movies["Title"])
+)
+
 df = pd.read_csv("data/sample_ratings.csv")
 
 print("Dataset Loaded")
@@ -51,7 +63,14 @@ def recommend_movies(movie_id, top_n=5):
 
     recommendations = similar_movies.iloc[1:top_n+1]
 
-    print(recommendations)
+    for movie, score in recommendations.items():
+        movie_name = movie_dict.get(movie, "Unknown Movie")
+
+    print(
+        f"MovieID: {movie} | "
+        f"Title: {movie_name} | "
+        f"Similarity: {score:.4f}"
+    )
 
     return recommendations
 
