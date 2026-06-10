@@ -63,14 +63,20 @@ def recommend_movies(movie_id, top_n=5):
 
     recommendations = similar_movies.iloc[1:top_n+1]
 
-    for movie, score in recommendations.items():
-        movie_name = movie_dict.get(movie, "Unknown Movie")
+    movie_name = movie_dict.get(movie_id, "Unknown Movie")
 
-    print(
-        f"MovieID: {movie} | "
-        f"Title: {movie_name} | "
-        f"Similarity: {score:.4f}"
-    )
+    print(f"\nTop {top_n} Recommendations for:")
+    print(movie_name)
+    print("-" * 50)
+
+    for idx, (movie, score) in enumerate(recommendations.items(), start=1):
+
+        recommended_movie = movie_dict.get(movie, "Unknown Movie")
+
+        print(
+            f"{idx}. {recommended_movie} "
+            f"(Similarity: {score:.4f})"
+        )
 
     return recommendations
 
