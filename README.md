@@ -4,12 +4,13 @@ A Netflix-inspired Movie Recommendation System built using Collaborative Filteri
 
 The project demonstrates the complete Machine Learning workflow, including data preprocessing, similarity computation, recommendation generation, interactive web application development, and cloud deployment.
 
-<u>Live Demo</u>
+<u>Live Demo:</u>
 
 Streamlit App:
 https://netflix-recommendation-system01.streamlit.app/
 
-<u>Project Preview</u>
+<u>Project Preview:</u>
+
 -Home Page
 
 ![alt text](image.png)
@@ -17,10 +18,8 @@ https://netflix-recommendation-system01.streamlit.app/
 -Recommendation Results
 ![alt text](image-1.png)
 
--Cloud Deployment
 
-
-<u>Project Overview</u>
+<u>Project Overview:</u>
 
 Recommendation systems are one of the most widely used applications of Machine Learning in modern platforms such as Netflix, Amazon, Spotify, and YouTube.
 
@@ -28,7 +27,7 @@ This project implements a Collaborative Filtering Recommendation Engine that sug
 
 Instead of relying on movie genres or descriptions, the system identifies patterns in user interactions and recommends movies that tend to be liked by similar users.
 
-<u>Problem Statement</u>
+<u>Problem Statement:</u>
 
 Given historical movie ratings from users, recommend movies that are most similar to a selected movie.
 
@@ -39,7 +38,7 @@ The recommendation process should:
 -Return the most relevant recommendations
 -Provide an easy-to-use web interface
 
-<u>Tech Stack></u>
+<u>Tech Stack:</u>
 Programming Language
 -Python
 Machine Learning
@@ -51,7 +50,7 @@ Used for:
 2.Similarity matrix generation
 3.Recommendation ranking
 
-<u>Data Processing</u>
+<u>Data Processing:</u>
 Pandas
 
 Used for:
@@ -121,93 +120,15 @@ Collaborative Filtering recommends movies by identifying patterns in user behavi
 
 Instead of analyzing movie content, the model learns from user ratings.
 
-Example:
-
-User A likes:
-Movie X
-Movie Y
-
-User B likes:
-Movie X
-Movie Y
-Movie Z
-
-→ Recommend Movie Z to User A
-User-Movie Matrix
-
-The dataset is transformed into a matrix:
-
-User	Movie 1	Movie 2	Movie 3
-User A	5	4	0
-User B	4	5	3
-User C	0	2	5
-
-Missing ratings are filled with:
-
-fillna(0)
 Cosine Similarity
 
 Movie similarity is computed using:
 
 cosine_similarity()
 
-Formula:
-
-Similarity(A,B)=
-∣∣A∣∣∣∣B∣∣
-A⋅B
-	​
-
-
 Movies with higher similarity scores are recommended.
 
-<u>Project Structure</u>
-Netflix-Recommendation-System/
-│
-├── app.py
-│
-├── data/
-│   ├── sample_ratings.csv
-│   └── raw/
-│       └── movie_titles.csv
-│
-├── src/
-│   ├── collaborative_filtering.py
-│   ├── recommendation_engine.py
-│   ├── movie_lookup.py
-│   ├── eda.py
-│   └── create_sample.py
-│
-├── reports/
-│   ├── EDA_Report.md
-│   └── rating_distribution.png
-│
-├── requirements.txt
-│
-└── README.md
-
-<u>Recommendation Pipeline</u>
-Netflix Dataset
-        │
-        ▼
-Data Preprocessing
-        │
-        ▼
-User-Movie Matrix
-        │
-        ▼
-Cosine Similarity Matrix
-        │
-        ▼
-Recommendation Engine
-        │
-        ▼
-Streamlit Interface
-        │
-        ▼
-User Recommendations
-
-<u>Features</u>
+<u>Features:</u>
 -Collaborative Filtering based recommendations
 -Cosine Similarity scoring
 -Interactive Streamlit interface
@@ -216,7 +137,7 @@ User Recommendations
 -End-to-end machine learning workflow
 -GitHub integration
 
-<u>Dataset</u>
+<u>Dataset:</u>
 
 The project uses a sampled subset of the Netflix Prize Dataset.
 
@@ -224,7 +145,7 @@ To ensure lightweight deployment and faster experimentation, a representative su
 
 The recommendation engine can be extended to larger datasets with minimal code modifications.
 
-<u>Key Learnings</u>
+<u>Key Learnings:</u>
 
 Through this project, I gained hands-on experience in:
 
@@ -237,7 +158,7 @@ Through this project, I gained hands-on experience in:
 -Cloud Deployment
 -End-to-End Machine Learning Projects
 
-<u>Author</u>
+<u>Author:</u>
 
 Khushboo
 
