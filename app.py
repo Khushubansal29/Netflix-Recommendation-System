@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 from src.recommendation_engine import recommend
 
 st.set_page_config(
@@ -13,16 +14,23 @@ st.write(
     "Movie Recommendation System using Collaborative Filtering"
 )
 
+movies = pd.read_csv(
+    "data/raw/movie_titles.csv",
+    header=None,
+    names=["MovieID", "Year", "Title"],
+    encoding="latin1",
+    on_bad_lines="skip"
+)
+
+movie_list = sorted(
+    movies["Title"]
+    .dropna()
+    .unique()
+)
+
 movie = st.selectbox(
     "Choose a Movie",
-    [
-        "Dinosaur Planet",
-        "Lilo and Stitch",
-        "Screamers",
-        "8 Man",
-        "My Favorite Brunette",
-        "Clifford: Clifford Saves the Day! / Clifford's Fluffiest Friend Cleo"
-    ]
+    movie_list
 )
 
 if st.button("Recommend"):
