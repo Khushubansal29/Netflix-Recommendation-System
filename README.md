@@ -11,11 +11,11 @@ https://netflix-recommendation-system01.streamlit.app/
 
 <u>Project Preview:</u>
 
--Home Page
+Home Page
 
 ![alt text](image.png)
 
--Recommendation Results
+Recommendation Results
 ![alt text](image-1.png)
 
 
@@ -33,64 +33,58 @@ Given historical movie ratings from users, recommend movies that are most simila
 
 The recommendation process should:
 
--Analyze user-movie interactions
--Compute similarity between movies
--Return the most relevant recommendations
--Provide an easy-to-use web interface
+-Analyze user-movie interactions <br>
+-Compute similarity between movies <br>
+-Return the most relevant recommendations <br>
+-Provide an easy-to-use web interface <br>
 
-<u>Tech Stack:</u>
+<u>Tech Stack: <br></u>
 Programming Language
--Python
+-Python <br>
 Machine Learning
 -Scikit-Learn
 
 Used for:
 
-1.Cosine Similarity computation
-2.Similarity matrix generation
-3.Recommendation ranking
+1.Cosine Similarity computation<br>
+2.Similarity matrix generation<br>
+3.Recommendation ranking<br>
 
-<u>Data Processing:</u>
+<u>Data Processing:<br></u>
 Pandas
 
 Used for:
 
-1.Reading datasets
-2.Data cleaning
-3.Pivot table creation
-4.Matrix manipulation
+1.Reading datasets<br>
+2.Data cleaning<br>
+3.Pivot table creation<br>
+4.Matrix manipulation<br>
 
-Web Application
--Streamlit
+Web Application<br>
+Streamlit<br>
 
 Used for:
 
-1.Interactive user interface
-2.Movie selection dropdown
-3.Recommendation display
-4.Cloud deployment
+1.Interactive user interface<br>
+2.Movie selection dropdown<br>
+3.Recommendation display<br>
+4.Cloud deployment<br>
 
 Features implemented:
 
--Responsive UI
--Custom CSS Styling
--Recommendation Cards
--Real-time Prediction
--Version Control
+-Responsive UI<br>
+-Custom CSS Styling<br>
+-Recommendation Cards<br>
+-Real-time Prediction<br>
+-Version Control<br>
 
 Git
 
 Used for:
 
--Source code management
--Commit history tracking
--Project versioning
-
-Common commands used:
-
-git add .
-git commit -m "message"
-git push
+-Source code management<br>
+-Commit history tracking<br>
+-Project versioning<br>
 
 Repository Hosting
 GitHub
@@ -105,58 +99,51 @@ Used for:
 Repository:
 
 https://github.com/Khushubansal29/Netflix-Recommendation-System
-Cloud Deployment
+
+Cloud Deployment:
+
 Streamlit Community Cloud
 
 Used for:
 
--Hosting the application online
--Public access through URL
--Automatic deployment from GitHub
-Machine Learning Approach
-Collaborative Filtering
+-Hosting the application online<br>
+-Public access through URL<br>
+-Automatic deployment from GitHub<br>
 
-Collaborative Filtering recommends movies by identifying patterns in user behavior.
+Machine Learning Approach:
+-Collaborative Filtering
 
-Instead of analyzing movie content, the model learns from user ratings.
+Collaborative Filtering recommends movies by identifying patterns in user behavior. Instead of analyzing movie content, the model learns from user ratings.
 
-Cosine Similarity
+-Cosine Similarity
 
-Movie similarity is computed using:
-
-cosine_similarity()
-
-Movies with higher similarity scores are recommended.
+Movie similarity is computed using: cosine_similarity(). Movies with higher similarity scores are recommended.
 
 <u>Features:</u>
--Collaborative Filtering based recommendations
--Cosine Similarity scoring
--Interactive Streamlit interface
--Netflix-inspired UI
--Cloud deployment
--End-to-end machine learning workflow
--GitHub integration
+-Collaborative Filtering based recommendations<br>
+-Cosine Similarity scoring<br>
+-Interactive Streamlit interface<br>
+-Netflix-inspired UI<br>
+-Cloud deployment<br>
+-End-to-end machine learning workflow<br>
+-GitHub integration<br>
 
 <u>Dataset:</u>
 
-The project uses a sampled subset of the Netflix Prize Dataset.
-
-To ensure lightweight deployment and faster experimentation, a representative subset of movies and ratings was used instead of the complete dataset.
-
-The recommendation engine can be extended to larger datasets with minimal code modifications.
+The project uses a sampled subset of the Netflix Prize Dataset. To ensure lightweight deployment and faster experimentation, a representative subset of movies and ratings was used instead of the complete dataset. The recommendation engine can be extended to larger datasets with minimal code modifications.
 
 <u>Key Learnings:</u>
 
 Through this project, I gained hands-on experience in:
 
--Recommendation Systems
--Collaborative Filtering
--Similarity Metrics
--Data Preprocessing
--Streamlit Development
--Git & GitHub Workflow
--Cloud Deployment
--End-to-End Machine Learning Projects
+-Recommendation Systems<br>
+-Collaborative Filtering<br>
+-Similarity Metrics<br>
+-Data Preprocessing<br>
+-Streamlit Development<br>
+-Git & GitHub Workflow<br>
+-Cloud Deployment<br>
+-End-to-End Machine Learning Projects<br>
 
 <u>Author:</u>
 
