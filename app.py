@@ -1,92 +1,187 @@
 import streamlit as st
-import pandas as pd
 from src.recommendation_engine import (
     recommend,
     available_movies
 )
 
+# =====================================
+# PAGE CONFIG
+# =====================================
+
+st.set_page_config(
+    page_title="Netflix Recommendation System",
+    page_icon="🎬",
+    layout="wide"
+)
+
+# =====================================
+# CSS
+# =====================================
+
 st.markdown("""
 <style>
+
 .stApp {
-    background-color: #141414;
+    background:
+    radial-gradient(
+        circle at top,
+        rgba(229,9,20,0.18),
+        #141414 35%
+    );
 }
 
-h1 {
-    color: #E50914;
-    text-align: center;
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<style>
+
+.stApp {
+    background-color: #141414;
 }
 
 .stButton > button {
     background-color: #E50914;
     color: white;
-    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
     border: none;
+    border-radius: 10px;
+    height: 60px;
+    width: 100%;
 }
 
 .stButton > button:hover {
     background-color: #B20710;
 }
 
-div[data-testid="stMetric"] {
-    background-color: #222222;
-    padding: 10px;
-    border-radius: 10px;
+.movie-card {
+    background-color: #1F1F1F;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    border-left: 6px solid #E50914;
 }
+
 </style>
 """, unsafe_allow_html=True)
 
-st.set_page_config(
-    page_title="Netflix Recommendation System",
-    page_icon="🎬",
-    layout="centered"
-)
+# =====================================
+# HEADER
+# =====================================
 
-st.markdown(
-    "<h1>🎬 Netflix Recommendation System</h1>",
-    unsafe_allow_html=True
-)
+st.markdown("""
+<div style="
+background: linear-gradient(90deg,#111111,#1d1d1d);
+padding:40px;
+border-radius:20px;
+text-align:center;
+margin-bottom:25px;
+">
 
-st.write(
-    "Movie Recommendation System using Collaborative Filtering"
-)
+<h1 style="
+color:#E50914;
+font-size:60px;
+margin-bottom:10px;
+">
+🎬 Netflix Recommendation System
+</h1>
+
+<p style="
+color:#CCCCCC;
+font-size:22px;
+">
+AI-Powered Movie Discovery using Collaborative Filtering
+</p>
+
+</div>
+""", unsafe_allow_html=True)
+
+# =====================================
+# STATS
+# =====================================
 
 col1, col2 = st.columns(2)
 
 with col1:
-    st.metric("Movies Available", len(available_movies))
+    st.metric(
+        "Movies Available",
+        len(available_movies)
+    )
 
 with col2:
-    st.metric("Recommendations", 5)
+    st.metric(
+        "Recommendations",
+        5
+    )
+
+st.write("")
+
+# =====================================
+# SEARCH
+# =====================================
+
+st.subheader("🔍 Search Movie")
 
 movie = st.selectbox(
-    "Choose a Movie",
+    "",
     available_movies
 )
 
-if st.button("Recommend"):
+st.write("")
+
+# =====================================
+# BUTTON
+# =====================================
+
+if st.button("🎯 Recommend Movies"):
 
     with st.spinner("Finding similar movies..."):
 
         recommended_movies = recommend(movie)
 
-    st.subheader("Recommended Movies")
+    st.markdown("## 🍿 Recommended Movies")
 
     if len(recommended_movies) == 0:
+
         st.warning("No recommendations found.")
+
     else:
+
         for i, rec in enumerate(recommended_movies, start=1):
 
-            st.markdown(
-                f"""
-                <div style="
-                    background-color:#222222;
-                    padding:15px;
-                    border-radius:10px;
-                    margin-bottom:10px;
-                    border-left:5px solid #E50914;
-                ">
-                    <h4>{i}. {rec}</h4>
-                </div>
-                """,
-                unsafe_allow_html=True
-            )
+            st.success(f"#{i} {rec}")
+
+        st.markdown("<br>", unsafe_allow_html=True)
+
+        st.markdown(
+            f"""
+             <div style="
+                background:#1F1F1F;
+                padding:18px;
+                border-radius:12px;
+                text-align:center;
+                color:#BBBBBB;
+                font-size:18px;
+                border:1px solid #333333;
+            ">
+                🎯 Recommendations generated because you selected
+            <span style="color:#E50914;font-weight:bold;">
+                {movie}
+            </span>
+            </div>
+             """,
+            unsafe_allow_html=True
+        )
+
+# =====================================
+# FOOTER
+# =====================================
+
+st.write("")
+st.write("")
+st.markdown("---")
+
+st.caption(
+    "Built using Python • Pandas • Scikit-Learn • Streamlit"
+)
