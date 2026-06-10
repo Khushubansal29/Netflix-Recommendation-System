@@ -86,15 +86,15 @@ Used for:
 -Commit history tracking<br>
 -Project versioning<br>
 
-Repository Hosting
+Repository Hosting<br>
 GitHub
 
 Used for:
 
--Code hosting
--Collaboration
--Project documentation
--Deployment integration
+-Code hosting<br>
+-Collaboration<br>
+-Project documentation<br>
+-Deployment integration<br>
 
 Repository:
 
@@ -110,7 +110,7 @@ Used for:
 -Public access through URL<br>
 -Automatic deployment from GitHub<br>
 
-Machine Learning Approach:
+Machine Learning Approach: <br>
 -Collaborative Filtering
 
 Collaborative Filtering recommends movies by identifying patterns in user behavior. Instead of analyzing movie content, the model learns from user ratings.
@@ -119,7 +119,7 @@ Collaborative Filtering recommends movies by identifying patterns in user behavi
 
 Movie similarity is computed using: cosine_similarity(). Movies with higher similarity scores are recommended.
 
-<u>Features:</u>
+<u>Features:<br></u>
 -Collaborative Filtering based recommendations<br>
 -Cosine Similarity scoring<br>
 -Interactive Streamlit interface<br>
@@ -147,10 +147,10 @@ Through this project, I gained hands-on experience in:
 
 <u>Author:</u>
 
-Khushboo
+Khushboo<br>
 
-B.Tech Chemical Engineering
-Indian Institute of Technology Roorkee
+B.Tech Chemical Engineering<br>
+Indian Institute of Technology Roorkee<br>
 
 GitHub:
 https://github.com/Khushubansal29
