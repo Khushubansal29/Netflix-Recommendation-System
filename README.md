@@ -13,10 +13,10 @@ https://netflix-recommendation-system01.streamlit.app/
 
 Home Page
 
-![HomePage](home_page.png)
+![HomePage](presentation/home_page.png)
 
 Recommendation Results
-![Recommendation Results](recommendations.png)
+![Recommendation Results](presentation/recommendations.png)
 
 
 <u>Project Overview:</u>
