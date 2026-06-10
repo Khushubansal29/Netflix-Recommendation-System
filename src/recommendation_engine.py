@@ -66,8 +66,10 @@ def recommend(movie_title, top_n=5):
 
     return recommendations
 
-print("Testing recommendation engine...")
-
-print(
-    recommend("Dinosaur Planet")
+available_movies = sorted(
+    [
+        movie_dict[movie_id]
+        for movie_id in similarity_df.columns
+        if movie_id in movie_dict
+    ]
 )
