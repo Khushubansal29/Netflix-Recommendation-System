@@ -46,7 +46,6 @@ print(round(df["Rating"].mean(), 2))
 
 import matplotlib.pyplot as plt
 
-# Rating Distribution
 rating_counts = df["Rating"].value_counts().sort_index()
 
 plt.figure(figsize=(8, 5))

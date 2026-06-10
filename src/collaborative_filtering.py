@@ -17,7 +17,6 @@ df = pd.read_csv("data/sample_ratings.csv")
 print("Dataset Loaded")
 print(df.shape)
 
-# User-Movie Matrix
 user_movie_matrix = df.pivot_table(
     index="UserID",
     columns="MovieID",
@@ -50,8 +49,6 @@ print(similarity_df.shape)
 
 print("\nFirst 5x5 Similarity Matrix:")
 print(similarity_df.iloc[:5, :5])
-
-# Recommendation Function
 
 def recommend_movies(movie_id, top_n=5):
 

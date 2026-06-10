@@ -1,21 +1,16 @@
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 
-
-# Load ratings
 df = pd.read_csv("data/sample_ratings.csv")
 
-# User-Movie Matrix
 user_movie_matrix = df.pivot_table(
     index="UserID",
     columns="MovieID",
     values="Rating"
 )
 
-# Fill missing values
 user_movie_filled = user_movie_matrix.fillna(0)
 
-# Similarity Matrix
 similarity_matrix = cosine_similarity(
     user_movie_filled.T
 )
@@ -26,7 +21,6 @@ similarity_df = pd.DataFrame(
     columns=user_movie_filled.columns
 )
 
-# Movie titles
 movies = pd.read_csv(
     "data/raw/movie_titles.csv",
     header=None,

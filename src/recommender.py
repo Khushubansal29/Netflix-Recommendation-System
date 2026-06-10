@@ -5,7 +5,6 @@ df = pd.read_csv("data/sample_ratings.csv")
 print("Dataset Loaded")
 print(df.shape)
 
-# Movie statistics
 movie_stats = (
     df.groupby("MovieID")["Rating"]
     .agg(["count", "mean"])

@@ -4,19 +4,11 @@ from src.recommendation_engine import (
     available_movies
 )
 
-# =====================================
-# PAGE CONFIG
-# =====================================
-
 st.set_page_config(
     page_title="Netflix Recommendation System",
     page_icon="🎬",
     layout="wide"
 )
-
-# =====================================
-# CSS
-# =====================================
 
 st.markdown("""
 <style>
@@ -66,10 +58,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# =====================================
-# HEADER
-# =====================================
-
 st.markdown("""
 <div style="
 background: linear-gradient(90deg,#111111,#1d1d1d);
@@ -97,10 +85,6 @@ AI-Powered Movie Discovery using Collaborative Filtering
 </div>
 """, unsafe_allow_html=True)
 
-# =====================================
-# STATS
-# =====================================
-
 col1, col2 = st.columns(2)
 
 with col1:
@@ -117,10 +101,6 @@ with col2:
 
 st.write("")
 
-# =====================================
-# SEARCH
-# =====================================
-
 st.subheader("🔍 Search Movie")
 
 movie = st.selectbox(
@@ -130,9 +110,6 @@ movie = st.selectbox(
 
 st.write("")
 
-# =====================================
-# BUTTON
-# =====================================
 
 if st.button("🎯 Recommend Movies"):
 
@@ -173,10 +150,6 @@ if st.button("🎯 Recommend Movies"):
              """,
             unsafe_allow_html=True
         )
-
-# =====================================
-# FOOTER
-# =====================================
 
 st.write("")
 st.write("")
