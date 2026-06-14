@@ -1,156 +1,212 @@
-<u>Netflix Recommendation System</u>
+# 🎬 Netflix Recommendation System
 
-A Netflix-inspired Movie Recommendation System built using Collaborative Filtering and Cosine Similarity. The application analyzes user-movie rating patterns and recommends movies that are similar to the one selected by the user.
+A Netflix inspired Movie Recommendation System built using **Collaborative Filtering** and **Cosine Similarity**. The application analyzes user movie rating patterns and recommends movies that are most similar to the movie selected by the user.
 
-The project demonstrates the complete Machine Learning workflow, including data preprocessing, similarity computation, recommendation generation, interactive web application development, and cloud deployment.
+The project demonstrates the complete Machine Learning workflow including data preprocessing, similarity computation, recommendation generation, interactive web application development, and cloud deployment.
 
-<u>Live Demo:</u>
+---
 
-Streamlit App:
+## Live Demo
+
+🔗 **Streamlit App**
 https://netflix-recommendation-system01.streamlit.app/
 
-<u>Project Preview:</u>
+🔗 **GitHub Repository**
+https://github.com/Khushubansal29/Netflix-Recommendation-System
 
-Home Page
+---
 
-![HomePage](presentation/home_page.png)
+## Project Preview
 
-Recommendation Results
+###Home Page
+
+![Home Page](presentation/home_page.png)
+
+### Recommendation Results
+
 ![Recommendation Results](presentation/recommendations.png)
 
+---
 
-<u>Project Overview:</u>
+## Project Overview
 
-Recommendation systems are one of the most widely used applications of Machine Learning in modern platforms such as Netflix, Amazon, Spotify, and YouTube.
+Recommendation systems are among the most widely used applications of Machine Learning and power platforms such as Netflix, Amazon, Spotify, and YouTube.
 
-This project implements a Collaborative Filtering Recommendation Engine that suggests movies based on user rating behavior.
+This project implements a **Collaborative Filtering Recommendation Engine** that suggests movies based on user rating behavior.
 
-Instead of relying on movie genres or descriptions, the system identifies patterns in user interactions and recommends movies that tend to be liked by similar users.
+Instead of analyzing movie genres or descriptions, the system learns patterns from user interactions and recommends movies that are frequently liked by users with similar preferences.
 
-<u>Problem Statement:</u>
+---
+
+## Problem Statement
 
 Given historical movie ratings from users, recommend movies that are most similar to a selected movie.
 
-The recommendation process should:
+The recommendation engine should:
 
--Analyze user-movie interactions <br>
--Compute similarity between movies <br>
--Return the most relevant recommendations <br>
--Provide an easy-to-use web interface <br>
+* Analyze user movie interactions
+* Compute movie similarity scores
+* Generate relevant recommendations
+* Deliver recommendations instantly
+* Provide a simple and interactive interface
 
-<u>Tech Stack: <br></u>
-Programming Language
--Python <br>
-Machine Learning
--Scikit-Learn
+---
 
-Used for:
+## Tech Stack
 
-1.Cosine Similarity computation<br>
-2.Similarity matrix generation<br>
-3.Recommendation ranking<br>
+| Category               | Technologies              |
+| ---------------------- | ------------------------- |
+| Programming Language   | Python                    |
+| Machine Learning       | Scikit-Learn              |
+| Data Processing        | Pandas, NumPy             |
+| Similarity Computation | Cosine Similarity         |
+| Web Framework          | Streamlit                 |
+| Version Control        | Git                       |
+| Repository Hosting     | GitHub                    |
+| Deployment             | Streamlit Community Cloud |
 
-<u>Data Processing:<br></u>
-Pandas
+---
 
-Used for:
+## Machine Learning Approach
 
-1.Reading datasets<br>
-2.Data cleaning<br>
-3.Pivot table creation<br>
-4.Matrix manipulation<br>
+### Collaborative Filtering
 
-Web Application<br>
-Streamlit<br>
+Collaborative Filtering recommends movies by learning patterns from user rating behavior.
 
-Used for:
+The system assumes that users who liked similar movies in the past are likely to prefer similar movies in the future.
 
-1.Interactive user interface<br>
-2.Movie selection dropdown<br>
-3.Recommendation display<br>
-4.Cloud deployment<br>
+### Cosine Similarity
 
-Features implemented:
+Movie similarity is computed using Cosine Similarity.
 
--Responsive UI<br>
--Custom CSS Styling<br>
--Recommendation Cards<br>
--Real-time Prediction<br>
--Version Control<br>
+Movies with higher similarity scores are considered more relevant and are recommended to the user.
 
-Git
+---
 
-Used for:
+## System Workflow
 
--Source code management<br>
--Commit history tracking<br>
--Project versioning<br>
+```text
+Movie Ratings Dataset
+          │
+          ▼
+Data Cleaning & Preprocessing
+          │
+          ▼
+User-Movie Pivot Matrix
+          │
+          ▼
+Cosine Similarity Matrix
+          │
+          ▼
+Recommendation Engine
+          │
+          ▼
+Streamlit Web Application
+          │
+          ▼
+Movie Recommendations
+```
 
-Repository Hosting<br>
-GitHub
+---
 
-Used for:
+## Features
 
--Code hosting<br>
--Collaboration<br>
--Project documentation<br>
--Deployment integration<br>
+| Feature                    | Description                                          |
+| -------------------------- | ---------------------------------------------------- |
+| Collaborative Filtering    | Generates recommendations using user rating behavior |
+| Cosine Similarity          | Calculates similarity between movies                 |
+| Interactive UI             | Easy movie selection through Streamlit               |
+| Real Time Recommendations  | Instant recommendation generation                    |
+| Netflix Inspired Interface | Clean and user friendly design                       |
+| Cloud Deployment           | Accessible from anywhere                             |
+| GitHub Integration         | Version-controlled development                       |
 
-Repository:
+---
 
-https://github.com/Khushubansal29/Netflix-Recommendation-System
+## Dataset Information
 
-Cloud Deployment:
+The project uses a sampled subset of the **Netflix Prize Dataset**.
 
-Streamlit Community Cloud
+### Dataset Components
 
-Used for:
+| Component         | Description                                 |
+| ----------------- | ------------------------------------------- |
+| Movie IDs         | Unique movie identifiers                    |
+| Movie Titles      | Movie names                                 |
+| User Ratings      | Ratings provided by users                   |
+| User Movie Matrix | Interaction matrix used for recommendations |
 
--Hosting the application online<br>
--Public access through URL<br>
--Automatic deployment from GitHub<br>
+A representative subset was used to enable lightweight deployment and faster experimentation.
 
-Machine Learning Approach: <br>
--Collaborative Filtering
+The recommendation engine can be scaled to larger datasets with minimal code modifications.
 
-Collaborative Filtering recommends movies by identifying patterns in user behavior. Instead of analyzing movie content, the model learns from user ratings.
+---
 
--Cosine Similarity
+## Recommendation Pipeline
 
-Movie similarity is computed using: cosine_similarity(). Movies with higher similarity scores are recommended.
+### Step 1: Data Preprocessing
 
-<u>Features:<br></u>
--Collaborative Filtering based recommendations<br>
--Cosine Similarity scoring<br>
--Interactive Streamlit interface<br>
--Netflix-inspired UI<br>
--Cloud deployment<br>
--End-to-end machine learning workflow<br>
--GitHub integration<br>
+* Load ratings dataset
+* Remove inconsistencies
+* Handle missing values
 
-<u>Dataset:</u>
+### Step 2: Matrix Creation
 
-The project uses a sampled subset of the Netflix Prize Dataset. To ensure lightweight deployment and faster experimentation, a representative subset of movies and ratings was used instead of the complete dataset. The recommendation engine can be extended to larger datasets with minimal code modifications.
+* Create user movie pivot table
+* Convert ratings into matrix form
 
-<u>Key Learnings:</u>
+### Step 3: Similarity Computation
+
+* Compute Cosine Similarity matrix
+* Store similarity scores
+
+### Step 4: Recommendation Generation
+
+* Find nearest similar movies
+* Rank recommendations
+* Return top recommendations
+
+### Step 5: Web Application
+
+* User selects a movie
+* System generates recommendations
+* Results displayed instantly
+
+---
+
+## Key Learnings
 
 Through this project, I gained hands-on experience in:
 
--Recommendation Systems<br>
--Collaborative Filtering<br>
--Similarity Metrics<br>
--Data Preprocessing<br>
--Streamlit Development<br>
--Git & GitHub Workflow<br>
--Cloud Deployment<br>
--End-to-End Machine Learning Projects<br>
+* Recommendation Systems
+* Collaborative Filtering
+* Cosine Similarity
+* Data Preprocessing
+* Matrix Transformations
+* Similarity-Based Learning
+* Streamlit Development
+* Git & GitHub Workflow
+* Cloud Deployment
+* End-to-End Machine Learning Projects
 
-<u>Author:</u>
+---
 
-Khushboo<br>
+## Future Improvements
 
-B.Tech Chemical Engineering<br>
-Indian Institute of Technology Roorkee<br>
+* Hybrid Recommendation Systems
+* Content Based Filtering
+* User Personalization
+* Deep Learning Based Recommenders
+* Larger Movie Dataset Integration
+* Recommendation Explanations
+
+---
+
+## Author
+
+**Khushboo**
+B.Tech Chemical Engineering
+Indian Institute of Technology Roorkee
 
 GitHub:
 https://github.com/Khushubansal29
